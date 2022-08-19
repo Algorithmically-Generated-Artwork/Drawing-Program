@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Algorithmically Generated Visual Designs</title>
+  <meta name="author" content="Co-authored by Alyssa Zhang, Maya Newman-Toker, John Mancini, and Michael Wehar">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=650">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <a href="https://github.com/Algorithmically-Generated-Artwork" class="logo">Algorithmically Generated Visual Designs</a>
+    <div class="header-right">
+      <a class="logo" href="https://github.com/Algorithmically-Generated-Artwork">GitHub Repositories</a>
+    </div>
+  </div>
+  <br>
+
+  <canvas id="myCanvas" class="bordered-content" width="600" height="600">Your browser does not support the HTML5 canvas tag.</canvas>
+  <br>
+  <div class="center">
+    <button id="startButton" class="drawred" onclick="start()">Start</button>
+    <button class="drawred" onclick="reset()">Reset</button>
+    <select id="select-algorithm" onchange="changeSelection()">
+      <option value="1">algDots (Simple Example)</option>
+      <option value="2">algGP (Mike's Geometric Patterns)</option>
+    </select>
+    <br><br>
+    <button class="drawred" onclick="clearCanvas()">Clear Canvas</button>
+    <button class="savecanvas" onclick="saveCanvas()">Save Image</button>
+  </div>
+
+  <!-- This is for downloading the canvas as an image -->
+  <a id="link"></a>
+
+  <script>
+    // Canvas
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    // Dimensions
+    var width = 600;
+    var height = 600;
+  </script>
+  <script src="algDots.js"></script>
+  <script src="algDots_params.js"></script>
+  <script src="algGP.js"></script>
+  <script src="algGP_params.js"></script>
+  <script>
+    // Algorithms set up
+    var algorithms = [algDots, algGP];
+    var algorithmsPaused = [];
+    for(let i = 0; i < algorithms.length; i++) {
+      algorithms[i].initialize();
+      algorithmsPaused.push(true);
+    }
+    // Algorithm selection set up
+    var currentSelection = 1;
+    document.getElementById("select-algorithm").value = currentSelection;
+    // Functions for user interaction
+    function changeSelection() {
+      currentSelection = document.getElementById("select-algorithm").value;
+      if(algorithmsPaused[currentSelection - 1]) {
+        document.getElementById("startButton").innerHTML = "Start";
+      } else {
+        document.getElementById("startButton").innerHTML = "Pause";
+      }
+    }
+    // Start or pause selected algorithm
+    function start() {
+      if(algorithmsPaused[currentSelection - 1]) {
+        algorithms[currentSelection - 1].start();
+        document.getElementById("startButton").innerHTML = "Pause";
+        console.log("Started " + currentSelection);
+      } else {
+        algorithms[currentSelection - 1].pause();
+        document.getElementById("startButton").innerHTML = "Start";
+        console.log("Paused " + currentSelection);
+      }
+      algorithmsPaused[currentSelection - 1] = !algorithmsPaused[currentSelection - 1];
+    }
+    // Reset selected algorithm
+    function reset() {
+      algorithms[currentSelection - 1].reset();
+      document.getElementById("startButton").innerHTML = "Start";
+      algorithmsPaused[currentSelection - 1] = true;
+      console.log("Reset " + currentSelection);
+    }
+    // Clear canvas
+    function clearCanvas() {
+      ctx.clearRect(0, 0, width, height);
+    }
+    // Save canvas as jpg
+    function saveCanvas() {
+      var link = document.getElementById('link');
+      link.setAttribute('download', 'visualdesign.jpg');
+      link.setAttribute('href', c.toDataURL("image/jpg").replace("image/jpg", "image/octet-stream"));
+      link.click();
+    }
+  </script>
+</body>
+</html>
