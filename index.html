@@ -25,6 +25,7 @@
     <select id="select-algorithm" onchange="changeSelection()">
       <option value="1">algDots (Simple Example)</option>
       <option value="2">algGP (Mike's Geometric Patterns)</option>
+      <option value="3">algVines (Alyssa's Vines)</option>
     </select>
     <br><br>
     <button class="drawred" onclick="clearCanvas()">Clear Canvas</button>
@@ -46,9 +47,11 @@
   <script src="algDots_params.js"></script>
   <script src="algGP.js"></script>
   <script src="algGP_params.js"></script>
+  <script src="algVines.js"></script>
+  <script src="algVines_params.js"></script>
   <script>
     // Algorithms set up
-    var algorithms = [algDots, algGP];
+    var algorithms = [algDots, algGP, algVines];
     var algorithmsPaused = [];
     for(let i = 0; i < algorithms.length; i++) {
       algorithms[i].initialize();
