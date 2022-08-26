@@ -51,6 +51,9 @@ Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-gene
 - [Algorithmically Generated Visual Art](https://alyssazhang.squarespace.com/work/algorithmically-generated-artwork) by Alyssa Zhang
 - [AI Generated Digital Painting from Start to Finish](https://www.aiplusinfo.com/blog/ai-generated-digital-painting-from-start-to-finish/) by Michael Wehar
 
+# More Links
+- [Reviewer Sign-up Form for Computer Generated Artwork](https://docs.google.com/forms/d/e/1FAIpQLSdhmHGGojQslun9Fp3AZL7hCYHlfo9F8SGW5YX-YMTFrR13Dw/viewform)
+
 ## License
 - MIT
 
