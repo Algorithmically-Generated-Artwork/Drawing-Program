@@ -27,7 +27,7 @@ algVines.drawTriangle = function (x, y, length, lineWidth, radians, shape_color,
   ctx.globalAlpha = shape_opacity;
   ctx.beginPath();
   if(algVines.rotation) {
-    console.log(algVines.rotationRads);
+    // console.log(algVines.rotationRads);
     let moveto_x = x + triangle_radius * Math.cos(-radians);
     let moveto_y = y + triangle_radius * Math.sin(-radians);
     let lineto1_x = x + triangle_radius * Math.cos(-(radians + 2 * Math.PI / 3));
@@ -128,7 +128,7 @@ algVines.drawNextShape = function(x, y, radians, color, opacity, numOfSides){
   } else if(algVines.randomColor && !algVines.changingColors) {
     color = algVines.initialColor;
   }
-  console.log(numOfSides);
+  // console.log(numOfSides);
   if(numOfSides == 3) {
     algVines.drawTriangle(x, y, algVines.sideLength, algVines.lineWidth, radians, color, opacity);
   } else if(numOfSides == 4) {
@@ -208,7 +208,7 @@ algVines.drawOneStep = function() {
       algVines.drawNextShape(algVines.current_x, algVines.current_y, 0, color, algVines.currentOpacity, algVines.sideNum, 0);
 
     } else if(algVines.drawShapes && algVines.rotation) {
-      console.log(algVines.rotationDegs);
+      // console.log(algVines.rotationDegs);
       algVines.drawNextShape(algVines.current_x, algVines.current_y, algVines.rotationRads, color, algVines.currentOpacity, algVines.sideNum);
 
     } else {
