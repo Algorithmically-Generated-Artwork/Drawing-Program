@@ -180,7 +180,7 @@ algGP.attemptToDraw = function () {
   let p2 = [x, y];
   // Check if valid
   if(algGP.checkValid(p1, p2)) {
-    console.log("Drawing Line");
+    // console.log("Drawing Line");
     algGP.drawLine(p1, p2);
     algGP.listOfLines[algGP.listOfLines.length] = [p1, p2, angle];
     algGP.branchOfLines[algGP.branchOfLines.length] = [p1, p2, angle];
