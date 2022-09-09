@@ -1,7 +1,7 @@
 # Algorithmically Generated Artwork - Drawing Program
 
 ## Introduction
-We introduce an approach for algorithmically generating visual designs.  Our current algorithms do not involve machine learning or artificial intelligence.  Rather, they generate images through procedural processes written in [JavaScript](https://www.w3schools.com/js/) using [HTML Canvas](https://www.w3schools.com/html/html5_canvas.asp) that draw lines, rectangles, circles, and other basic shapes onto a digital canvas.  Some important aspects of our drawing processes include parameter configuration, randomness, and modularization.   
+We are designing and implementing algorithms that generate visual designs. These algorithms, coded in JavaScript, are built from procedural processes that draw lines and basic shapes onto an [HTML Canvas](https://www.w3schools.com/html/html5_canvas.asp). These procedural processes are inspired by mathematical concepts, natural phenomena, and artistic trends.  
 
 ## Algorithm Structure
 Our algorithms are written in JavaScript.  Each algorithm has two JavaScript files.  One file is for the drawing procedure and the other is for parameter configuration.  The drawing procedure is declared as a dictionary object and includes functions called *start*, *pause*, *reset*, *initialize*, and *drawOneStep*.
