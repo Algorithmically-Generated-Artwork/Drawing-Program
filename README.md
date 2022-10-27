@@ -67,4 +67,6 @@ Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-gene
 - Alyssa Zhang
 
 ## Contact Us
-Send an email to [Michael Wehar](http://michaelwehar.com) or [submit a pull request](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/pulls)!
+We are excited to start collaborations and build new partnerships!
+
+Send an email to [Michael Wehar](http://michaelwehar.com) or [submit a pull request](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/pulls).
