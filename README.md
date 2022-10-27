@@ -1,10 +1,13 @@
 # Algorithmically Generated Artwork - Drawing Program
 
 ## Introduction
-We are designing and implementing algorithms that generate visual designs. These algorithms, coded in JavaScript, are built from procedural processes that draw lines and basic shapes onto an [HTML Canvas](https://www.w3schools.com/html/html5_canvas.asp). These procedural processes are inspired by mathematical concepts, natural phenomena, and artistic trends.  
+We are designing and implementing algorithms that generate visual designs. These algorithms, coded in JavaScript, are built from procedural processes that draw lines and basic shapes onto an [HTML Canvas](https://www.w3schools.com/html/html5_canvas.asp). These procedural processes are inspired by mathematical concepts, natural phenomena, and artistic trends.
 
 ## Algorithm Structure
 Each algorithm has two JavaScript files.  One file is for the drawing procedure and the other is for parameter configuration.  The drawing procedure is declared as a dictionary object and includes functions called *start*, *pause*, *reset*, *initialize*, and *drawOneStep*.
+
+## Demo Video
+[![Demo Video](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/video_preview.png)](https://www.youtube.com/watch?v=SGNbv__s0rI)  
 
 ## Web Interface
 The web interface is used to test and demonstrate the drawing algorithms.  Using the web interface, a user can start, pause, or reset a drawing algorithm.  In addition, a user can also clear the canvas and save the current state of the digital canvas as an image file.
