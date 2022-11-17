@@ -6,8 +6,11 @@ We are designing and implementing algorithms that generate visual designs. These
 ## Algorithm Structure
 Each algorithm has two JavaScript files.  One file is for the drawing procedure and the other is for parameter configuration.  The drawing procedure is declared as a dictionary object and includes functions called *start*, *pause*, *reset*, *initialize*, and *drawOneStep*.
 
-## Demo Video
-[![Demo Video](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/video_preview.png)](https://www.youtube.com/watch?v=SGNbv__s0rI)  
+## Artwork Video
+[![Artwork Video](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/video_preview.png)](https://www.youtube.com/watch?v=SGNbv__s0rI)
+
+## Talk & Tutorial Video
+[![Talk & Tutorial Video](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/talk_preview.png)](https://www.youtube.com/watch?v=0Ts7Sa_z69Y&t=46s)
 
 ## Web Interface
 The web interface is used to test and demonstrate the drawing algorithms.  Using the web interface, a user can start, pause, or reset a drawing algorithm.  In addition, a user can also clear the canvas and save the current state of the digital canvas as an image file.
