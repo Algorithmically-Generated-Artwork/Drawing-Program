@@ -1,26 +1,19 @@
 /* Parameters */
 /* Yellow to blue gradient */
-algVines.gradient1 = [
-    {r: 250, g: 250, b: 110},
-    {r: 227, g: 230, b: 108},
-    {r: 204, g: 210, b: 105},
-    {r: 181, g: 191, b: 103},
-    {r: 158, g: 171, b: 100},
-    {r: 134, g: 151, b: 98},
-    {r: 111, g: 131, b: 95},
-    {r: 88, g: 112, b: 93},
-    {r: 65, g: 92, b: 90},
-    {r: 42, g: 72, b: 88}
-]
-
-// Gradients
-algVines.gradients = [
-    algVines.gradient1
+algVines.palette1 = [
+  "rgb(250,250,110)",
+  "rgb(227,230,108)",
+  "rgb(204,210,105)",
+  "rgb(181,191,103)",
+  "rgb(158,171,100)",
+  "rgb(134,151,98)",
+  "rgb(111,131,95)",
+  "rgb(88,112,93)",
+  "rgb(65,92,90)",
+  "rgb(42,72,88)"
 ];
 
-// Draw colors
-algVines.defaultColor = "blue";
-algVines.colorList = [
+algVines.palette2 = [
     "purple",
     "fuchsia",
     "lime",
@@ -32,7 +25,46 @@ algVines.colorList = [
     "tomato"
 ]
 
+algVines.palette3 = [
+  "rgb(163,0,33)",
+  "rgb(245,99,41)",
+  "rgb(238,175,27)",
+  "rgb(236,237,232)",
+  "rgb(129,177,162)"
+];
+
+algVines.palette4 = [
+  "rgb(57,0,153)",
+  "rgb(158,0,89)",
+  "rgb(255,0,84)",
+  "rgb(255,84,0)",
+  "rgb(255,189,0)"
+];
+
+algVines.palette5 = [
+  "rgb(121,125,98)",
+  "rgb(155,155,122)",
+  "rgb(217,174,148)",
+  "rgb(241,220,167)",
+  "rgb(208,140,96)",
+  "rgb(153,123,102)"
+];
+
+// Palettes
+algVines.palettes = [
+    algVines.palette1,
+    algVines.palette2,
+    algVines.palette3,
+    algVines.palette4,
+    algVines.palette5
+];
+
+// Draw colors
+algVines.defaultColor = "blue";
+algVines.colorList = algVines.palette2;
+
 // Background colors
+algVines.isBackgroundSet = false;
 algVines.backgroundColors = [
     "black",
     "white",
@@ -42,30 +74,31 @@ algVines.backgroundColors = [
     "blue",
     "green",
     "yellow"
-]
+];
 
 // Movement params
-algVines.speed = 15;
+algVines.speed = 20;
+algVines.maxNumOfSteps = 50000;
 
 // Path params
 algVines.stepX = 1;
 algVines.stepY = 8;
-algVines.noisyPath = true;
+algVines.noisyPath = false;
 algVines.noiseX = 2;
 algVines.noiseY = 1;
 algVines.randomPath = false;
 algVines.stepChoicesX = [-10, 0, 14];
 algVines.stepChoicesY = [-6, 0, 8];
 algVines.curvedPath = true;
-algVines.pathRadius = 4;
+algVines.pathRadius = 5;
 algVines.pathCycle = 30;
 algVines.changingRadius = true;
-algVines.radiusIncrementCycle = 50;
-algVines.alsoLinear = true;
+algVines.radiusIncrementCycle = 20;
+algVines.alsoLinear = false;
 
 // Color params
-algVines.useColorList = false;
-algVines.randomColor = true;
+algVines.useColorList = true;
+algVines.randomColor = false;
 algVines.changingColors = true;
 
 // Circle params
@@ -80,8 +113,7 @@ algVines.circleRandomness = false;
 algVines.drawShapes = true;
 algVines.rotation = true;
 algVines.lineWidth = 2;
-algVines.offset = 0;
-algVines.sideLength = 10;
+algVines.sideLength = 30;
 
 // Spike params
 algVines.numOfSpikes = 5;

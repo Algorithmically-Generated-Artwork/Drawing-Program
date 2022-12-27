@@ -16,6 +16,7 @@ algVines.drawFilledCircle = function(x, y, radius, shape_color, shape_opacity) {
     ctx.globalAlpha = shape_opacity;
     ctx.beginPath();
     ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    ctx.closePath();
     ctx.fill();
 }
 
@@ -44,6 +45,7 @@ algVines.drawTriangle = function (x, y, length, lineWidth, radians, shape_color,
     ctx.lineTo(x + length / 2, y + height / 2);
     ctx.lineTo(x, y - height / 2);
   }
+  ctx.closePath();
   ctx.stroke();
 }
 
@@ -62,6 +64,7 @@ algVines.drawSquare = function (x, y, radius, length, lineWidth, shape_color, sh
     }
     ctx.lineTo(x + radius * Math.cos(0 * angle + radians), y + radius * Math.sin(0 * angle + radians));
   }
+  ctx.closePath();
   ctx.stroke();
 }
 
@@ -86,8 +89,8 @@ algVines.drawPentagon = function (x, y, radius, lineWidth, shape_color, shape_op
     }
     ctx.lineTo(x + radius * Math.cos(-(0 * angle + radians)), y + radius * Math.sin(-(0 * angle + radians)));
   }
+  ctx.closePath();
   ctx.stroke();
-
 }
 
 algVines.drawLine = function(p1, p2, lineWidth, shape_color, shape_opacity) {
@@ -134,12 +137,18 @@ algVines.drawNextShape = function(x, y, radians, color, opacity, numOfSides){
   } else if(numOfSides == 4) {
     algVines.drawSquare(x, y, Math.sqrt(2) * algVines.sideLength / 2, algVines.sideLength, algVines.lineWidth, color, opacity, radians);
   } else {
-    // x, y, numOfSides, radius, lineWidth, shape_color, shape_opacity, offset
+    // x, y, numOfSides, radius, lineWidth, shape_color, shape_opacity, radians
     algVines.drawPentagon(x, y, algVines.sideLength / (2 * Math.sin(Math.PI / 5)), algVines.lineWidth, color, opacity, radians);
   }
 }
 
 algVines.drawOneStep = function() {
+    // Reached the end
+    if(algVines.numOfSteps > algVines.maxNumOfSteps) {
+      clearInterval(algVines.loop);
+      return false;
+    }
+
     // Increment iterations
     algVines.currentIterations += 1;
     // Path and movement
@@ -204,13 +213,11 @@ algVines.drawOneStep = function() {
         }
         algVines.drawFilledCircle(algVines.current_x, algVines.current_y, radius, color, opacity);
     } else if(algVines.drawShapes && !algVines.rotation) {
-      // x, y, length, lineWidth, radians, shape_color, shape_opacity
-      algVines.drawNextShape(algVines.current_x, algVines.current_y, 0, color, algVines.currentOpacity, algVines.sideNum, 0);
-
+      // x, y, radians, color, opacity, numOfSides
+      algVines.drawNextShape(algVines.current_x, algVines.current_y, 0, color, algVines.currentOpacity, algVines.sideNum);
     } else if(algVines.drawShapes && algVines.rotation) {
       // console.log(algVines.rotationDegs);
       algVines.drawNextShape(algVines.current_x, algVines.current_y, algVines.rotationRads, color, algVines.currentOpacity, algVines.sideNum);
-
     } else {
       for(let i = 0; i < algVines.numOfSpikes; i++) {
         let x_offset = Math.floor(algVines.spikeOffsetRangeX * Math.random()) - Math.floor(algVines.spikeOffsetRangeX / 2);
@@ -222,6 +229,9 @@ algVines.drawOneStep = function() {
         }
       }
     }
+
+    algVines.numOfSteps++;
+    return true;
 }
 
 algVines.reset = function () {
@@ -229,15 +239,10 @@ algVines.reset = function () {
     algVines.currentIterations = 0;
     algVines.current_x = Math.floor(Math.random() * width);
     algVines.current_y = Math.floor(Math.random() * height);
-    if(!algVines.changingColors && algVines.randomColor) {
+    if(!algVines.changingColors) {
       algVines.initialColor = algVines.getRandomColor();
-    } else if(!algVines.changingColors && algVines.useColorList) {
-      let colorIndex = Math.floor(Math.random() * algVines.colorList.length);
-      circle_color = algVines.colorList[colorIndex];
-      algVines.initialColor = circle_color;
     }
-
-    algVines.isBackgroundSet = false;
+    algVines.numOfSteps = 0;
 }
 
 algVines.initialize = function() {
@@ -251,11 +256,12 @@ algVines.pause = function () {
 }
 
 algVines.start = function () {
-    if(!algVines.isBackgroundSet) {
+    if(algVines.isBackgroundSet) {
+        algVines.setBackgroundColor(algVines.backgroundColor);
+    } else {
         algVines.backgroundChoice = Math.floor(Math.random() * algVines.backgroundColors.length);
         algVines.backgroundColor = algVines.backgroundColors[algVines.backgroundChoice];
         algVines.setBackgroundColor(algVines.backgroundColor);
-        algVines.isBackgroundSet = true;
     }
     algVines.loop = setInterval(algVines.drawOneStep, algVines.speed);
 }
