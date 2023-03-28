@@ -1,7 +1,7 @@
 /***** Predefine variables *****/
 :root {
     --border_color: #dadada;
-    --page_font_family: Comic Sans MS, Comic Sans, sans-serif;
+    --page_font_family: sans-serif;
     --hover_color: #F2F3F4;
     --active_color: #D7DBDD;
     --canvas_wrapping_color: #F8F9F9;
@@ -46,14 +46,13 @@
 }
 
 .navbar-text {
-    margin-top: 4px;
     padding-left: 12px;
     padding-right: 12px;
     font-size: 18px;
 }
 
 .header .navbar .container-fluid .navbar-nav a:hover {
-    color: lightslategray;
+    color: white;
 }
 
 @media screen and (max-width: 991px) {
@@ -72,7 +71,7 @@
     display: grid;
     grid-template-areas: "canvasSection sideSection";
     grid-template-columns: 7fr 4fr;
-    min-height: calc(100vh - 66px);
+    min-height: max(750px, calc(100vh - 66px));
     overflow: hidden;
 }
 
@@ -144,7 +143,7 @@
     grid-template-areas: "SideContent SideSelection";
     grid-template-columns: 5fr 1fr;
     font-family: var(--page_font_family);
-    height: calc(100vh - 66px);
+    height: max(750px, calc(100vh - 66px));
 }
 
 .sideContent {
