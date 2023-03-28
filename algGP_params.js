@@ -1,5 +1,5 @@
 /* Parameters */
-algGP.speed = 5;
+algGP.speed = 0;
 algGP.maxNumOfSteps = 8000;
 algGP.numOfAttempts = 50;
 algGP.lineColor = "black";

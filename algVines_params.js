@@ -77,7 +77,7 @@ algVines.backgroundColors = [
 ];
 
 // Movement params
-algVines.speed = 20;
+algVines.speed = 0;
 algVines.maxNumOfSteps = 50000;
 
 // Path params
