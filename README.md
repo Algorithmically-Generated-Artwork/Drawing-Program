@@ -1,4 +1,4 @@
-# Algorithmically Generated Artwork - Drawing Program
+# AlgoArt Creator Studio (Simplified Version)
 
 ## Introduction
 [AlgoArt.org](https://algoart.org/github/) is a digital platform that brings together Artists and Technologists to create algorithmically generated visual designs and artworks. This repository contains a simplified and light-weight version of our Creator Studio that you can use to develop your own drawing algorithms and generate your own unique artworks!
