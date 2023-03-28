@@ -96,7 +96,8 @@
 .action_sidebar .btn {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 70px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     padding: 10px 0;
     width: 80%;
 }
@@ -106,7 +107,7 @@
 }
 
 .action_sidebar svg {
-    width: 50%;
+    width: max(37px, 53%);
 }
 
 .custom-tooltip {
@@ -312,7 +313,9 @@
 
 .param_panel .current_param_name strong {
     font-size: 23px;
-    padding: 0;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: var(--param_name_color);
 }
 
