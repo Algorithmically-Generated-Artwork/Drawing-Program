@@ -4,10 +4,10 @@
 We are designing and implementing algorithms that generate visual designs. These algorithms, coded in JavaScript, are built from procedural processes that draw lines and basic shapes onto an [HTML Canvas](https://www.w3schools.com/html/html5_canvas.asp). These procedural processes are inspired by mathematical concepts, natural phenomena, and artistic trends.
 
 ## Artwork Video
-[![Artwork Video](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/video_preview.png)](https://www.youtube.com/watch?v=SGNbv__s0rI)
+[![Artwork Video](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/video_preview/image1.png)](https://www.youtube.com/watch?v=SGNbv__s0rI)
 
 ## Talk & Tutorial Video
-[![Talk & Tutorial Video](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/talk_preview.png)](https://www.youtube.com/watch?v=0Ts7Sa_z69Y&t=46s)
+[![Talk & Tutorial Video](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/video_preview/image2.png)](https://www.youtube.com/watch?v=0Ts7Sa_z69Y&t=46s)
 
 ## Algorithm Structure
 Each algorithm has two JavaScript files.  One file is for the drawing procedure and the other is for parameter configuration.  The drawing procedure is declared as a dictionary object and includes functions called *start*, *pause*, *reset*, *initialize*, and *drawOneStep*.
@@ -17,20 +17,20 @@ The web interface is used to test and demonstrate the drawing algorithms.  Using
 
 Screenshot:
 
-![Web Interface Screenshot](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/web_interface.png)
+![Web Interface Screenshot](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/web_interface.png)
 
 ## Algorithms
 **algDots (Simple Example):** This is a sample drawing algorithm that is meant for viewers to understand the programming framework that is used to create a new drawing algorithm.  We encourage you to clone our repo and try modifying this code to build your own drawing algorithm.  If you do so, **please consider sharing your resulting artworks with us** and [submit a pull request](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/pulls)!
 
 Example Drawing:
 
-![algDots Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/algDots.gif)
+![algDots Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algDots.gif)
 
 **algGP (Mike's Geometric Patterns):** This drawing program takes in over 30 different parameters representing line length, line thickness, rotation angles, color variations, background color blending, line sparsity, and whether intersecting lines are allowed. Based on these parameters and a random number generator, the drawing program generates different kinds of repeated geometric patterns. All of the generated patterns are drawn line by line on a digital canvas.
 
 Example Drawing:
 
-![algGP Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/algGP.gif)
+![algGP Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algGP.gif)
 
 Blog Article: https://michaelwehar.wordpress.com/2022/06/16/algorithmically-generated-visual-designs-geometric-patterns/
 
@@ -38,7 +38,7 @@ Blog Article: https://michaelwehar.wordpress.com/2022/06/16/algorithmically-gene
 
 Example Drawing:
 
-![algVines Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/example_images/algVines.gif)
+![algVines Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algVines.gif)
 
 Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-generated-visual-designs-5-vines/
 
