@@ -83,8 +83,8 @@ Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-gene
 *Actively Contributing*
 
 - Xingyu (Kevin) Dong
-- Michael Wehar
 - Xinxin Li
+- Michael Wehar
 
 *Past Contributors*
 
