@@ -114,7 +114,7 @@
             </div>
             <!-- Canvas -->
             <div class="canvas_wrapper">
-                <canvas id="myCanvas" class="canvas" width="600" height="600">Your browser does not support the HTML5 canvas
+                <canvas id="myCanvas" class="canvas" width="2400" height="2400">Your browser does not support the HTML5 canvas
                     tag.
                 </canvas>
             </div>
@@ -301,9 +301,10 @@
         // Canvas
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
+        ctx.scale(4, 4);
         // Dimensions
-        var width = c.width;
-        var height = c.height;
+        var width = c.width/4;
+        var height = c.height/4;
     </script>
     <script src="algDots.js"></script>
     <script src="algDots_params.js"></script>
