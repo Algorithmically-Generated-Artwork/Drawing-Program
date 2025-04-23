@@ -5,7 +5,7 @@
 
 *Try out our public demo @* https://algoart.org/studio.html
 
-## Videos & Talks
+## Videos and Tutorials
 
 *Artwork Video*
 
@@ -55,24 +55,47 @@ Example Drawing:
 
 Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-generated-visual-designs-5-vines/
 
-## Articles & Links
+## List of Algorithms and Blog Posts
 
-*Blog Articles*
+- [Wrapping Paper](https://michaelwehar.wordpress.com/2022/06/14/algorithmically-generated-visual-designs-wrapping-paper/) by A. Zhang
+- [Geometric Patterns](https://michaelwehar.wordpress.com/2022/06/16/algorithmically-generated-visual-designs-geometric-patterns/) by M. Wehar
+- [Overlapping Tiles](https://michaelwehar.wordpress.com/2022/07/07/algorithmically-generated-visual-designs-3-overlapping-tiles/) by M. Wehar
+- [Spiderwebs](https://michaelwehar.wordpress.com/2022/07/10/algorithmically-generated-visual-designs-4-spiderwebs/) by M. Newman-Toker
+- [Vines](https://michaelwehar.wordpress.com/2022/07/23/algorithmically-generated-visual-designs-5-vines/) by A. Zhang
+- [Fractals](https://michaelwehar.wordpress.com/2022/08/10/algorithmically-generated-visual-designs-6-fractals/) by M. Newman-Toker and M. Wehar
+- [70's Funk](https://michaelwehar.wordpress.com/2022/08/10/algorithmically-generated-visual-designs-7-70s-funk/) by M. Wehar and A. Zhang
+- [Game of Life](https://michaelwehar.wordpress.com/2022/08/10/algorithmically-generated-visual-designs-8-game-of-life/) by J. Mancini and M. Wehar
+- [Trees](https://michaelwehar.wordpress.com/2022/08/19/algorithmically-generated-visual-designs-9-trees/) by M. Wehar
+- [Spirals](https://michaelwehar.wordpress.com/2024/08/02/algoart-10-spirals/) by L. Suresh
+- [Heat Map](https://michaelwehar.wordpress.com/2024/08/02/algoart-11-heat-map/) by V. Sumano
+- [Stickers](https://michaelwehar.wordpress.com/2024/10/22/algoart-12-stickers/) by M. Wehar
+- [Composition](https://michaelwehar.wordpress.com/2024/10/28/algoart-13-composition/) by X. Dong and M. Wehar
+- [Collisions](https://michaelwehar.wordpress.com/2025/03/08/algoart-14-collisions/) by O. Khan
+- [Constellations](https://michaelwehar.wordpress.com/2025/03/11/algoart-15-consellations/) by J. Gallardo Moreno
+- [Voronoi](https://michaelwehar.wordpress.com/2025/03/12/algoart-16-voronoi/) by J. Gallardo Moreno
 
-- [Wrapping Paper](https://michaelwehar.wordpress.com/2022/06/14/algorithmically-generated-visual-designs-wrapping-paper/) by Alyssa Zhang
-- [Geometric Patterns](https://michaelwehar.wordpress.com/2022/06/16/algorithmically-generated-visual-designs-geometric-patterns/) by Michael Wehar
-- [Overlapping Tiles](https://michaelwehar.wordpress.com/2022/07/07/algorithmically-generated-visual-designs-3-overlapping-tiles/) by Michael Wehar
-- [Spiderwebs](https://michaelwehar.wordpress.com/2022/07/10/algorithmically-generated-visual-designs-4-spiderwebs/) by Maya Newman-Toker
-- [Vines](https://michaelwehar.wordpress.com/2022/07/23/algorithmically-generated-visual-designs-5-vines/) by Alyssa Zhang
-- [Fractals](https://michaelwehar.wordpress.com/2022/08/10/algorithmically-generated-visual-designs-6-fractals/) by Maya Newman-Toker and Michael Wehar
-- [70's Funk](https://michaelwehar.wordpress.com/2022/08/10/algorithmically-generated-visual-designs-7-70s-funk/) by Michael Wehar and Alyssa Zhang
-- [Game of Life](https://michaelwehar.wordpress.com/2022/08/10/algorithmically-generated-visual-designs-8-game-of-life/) by John Mancini and Michael Wehar
-- [Trees](https://michaelwehar.wordpress.com/2022/08/19/algorithmically-generated-visual-designs-9-trees/) by Michael Wehar
+## Articles, Presentations, and Links
 
-*More Articles*
+*Academic Papers & Posters*
 
+- Students Teaching Students Computer Art and Graphics by M. Wehar (To Appear, Eurographics 2025)
+- Creating Patterns with Distance Functions & Voronoi Diagrams by J. Gallardo Moreno and M. Wehar (To Appear, I3D 2025)
+
+*Art Exhibitions*
+
+- [Generative Clothing Designs (GCD) by AlgoArt (2025)](https://aydelotte.swarthmore.edu/publications/generative-clothing-designs-gcd-by-algoart/)
+- [AlgoArt @ Ludington Library (2023)](https://www.imaginary.org/event/algoart-exhibit-ludington-library)
+- [AlgoArt Exhibition (2023)](https://aydelotte.swarthmore.edu/publications/algoart-exhibition-at-mccabe-library/)
+
+*More Articles & Presentations*
+
+- [Generative Clothing Designs (GCD) by AlgoArt](https://gallery.bridgesmathart.org/exhibitions/2024-bridges-conference-fashion-show/michael-wehar) (Bridges 2024 - Fashion Show)
+- [AlgoArt - Nine Drawing Algorithms](https://gallery.bridgesmathart.org/exhibitions/2023-bridges-conference-short-film-festival/michael-wehar) (Bridges 2023 - Short Film Festival)
+- Algorithmically Generated Visual Design (Lightning Talk @ CCSCNE 2023)
+- [Algorithmically Generated Artwork](https://dl.acm.org/doi/10.5555/3580523.3580581) (Poster & Abstract CCSC:EA 2022)
+- [A Visualization of Algorithmically Generated Artwork](https://www.youtube.com/watch?v=SGNbv__s0rI) (IFoRE 2022 - STEM Art and Film Festival)
+- [AI Generated Digital Painting from Start to Finish](https://www.aiplusinfo.com/blog/ai-generated-digital-painting-from-start-to-finish/) (Artificial Intelligence + Guest Blog)
 <!--- - [Algorithmically Generated Visual Art](https://alyssazhang.squarespace.com/work/algorithmically-generated-artwork) by Alyssa Zhang --->
-- [AI Generated Digital Painting from Start to Finish](https://www.aiplusinfo.com/blog/ai-generated-digital-painting-from-start-to-finish/) by Michael Wehar
 
 *More Links*
 
@@ -80,21 +103,48 @@ Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-gene
 
 ## Contributors
 
-*Actively Contributing*
-
-- Xingyu (Kevin) Dong
-- Xinxin Li
+*Project Director*
 - Michael Wehar
+
+*Active Contributors*
+
+- Jhovani Gallardo Moreno
+- Omar Khan
+- Patrick Tone
 
 *Past Contributors*
 
+- Lalith Suresh
+- Victor Sumano
+- EK Brickner
+- Ryan Oet
+- Xingyu (Kevin) Dong
+- Xinxin Li
 - John Mancini
 - Maya Newman-Toker
 - Alyssa Zhang
 
 *Special thanks to all friends and collaborators who offered help!*
 
-## License & Libraries
+## Collaborations
+
+During Spring 2023, students from [CS410](https://cs410.net) @ UMass Boston forked our repository and contributed to our open source project adding functionality for 3D Drawing Algorithms.
+
+*Project Links*
+
+- Forked Repository: https://github.com/devnamedjean/Drawing-Program
+- Public Demo: https://devnamedjean.github.io/Drawing-Program/
+
+*Student Developers*
+
+- Jake Breen
+- Jean Gerard
+- Prateeksha Bhojaraj
+- Richard Chang
+
+*Special thanks D. Haehn, S. Raikar, and to all of those who offered help!*
+
+## License and Libraries
 
 The code in this repository is made available under MIT License.
 
@@ -104,6 +154,7 @@ This platform was developed using the following libraries which are available un
 - [Bootstrap Icons](https://github.com/twbs/icons)
 
 ## Contact Us
+
 We are excited to start collaborations and build new partnerships!
 
 Send an email to [Michael Wehar](http://michaelwehar.com) or [submit a pull request](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/pulls).
