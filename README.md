@@ -91,6 +91,7 @@ Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-gene
 
 - [Generative Clothing Designs (GCD) by AlgoArt](https://gallery.bridgesmathart.org/exhibitions/2024-bridges-conference-fashion-show/michael-wehar) (Bridges 2024 - Fashion Show)
 - [AlgoArt - Nine Drawing Algorithms](https://gallery.bridgesmathart.org/exhibitions/2023-bridges-conference-short-film-festival/michael-wehar) (Bridges 2023 - Short Film Festival)
+- [Using Augmented Reality to Show How An Artwork Was Created](https://dac.siggraph.org/sparks/2023-01-spatiality-in-virtual-reality-representation-interpretation-experience/) (SIGGRAPH DAC: SPARKS TALK 2023)
 - Algorithmically Generated Visual Design (Lightning Talk @ CCSCNE 2023)
 - [Algorithmically Generated Artwork](https://dl.acm.org/doi/10.5555/3580523.3580581) (Poster & Abstract CCSC:EA 2022)
 - [A Visualization of Algorithmically Generated Artwork](https://www.youtube.com/watch?v=SGNbv__s0rI) (IFoRE 2022 - STEM Art and Film Festival)
