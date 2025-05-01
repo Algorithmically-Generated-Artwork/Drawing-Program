@@ -80,6 +80,7 @@ Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-gene
 
 - Students Teaching Students Computer Art and Graphics by M. Wehar (To Appear, Eurographics 2025)
 - Creating Patterns with Distance Functions & Voronoi Diagrams by J. Gallardo Moreno and M. Wehar (To Appear, I3D 2025)
+- Creating Variation When Building Image Generation Datasets by J. Gallardo Moreno, O. Khan, and M. Wehar (To Appear, Bridges 2025)
 
 *Art Exhibitions*
 
