@@ -1,7 +1,7 @@
 /***** Predefine variables *****/
 :root {
     --border_color: #dadada;
-    --page_font_family: sans-serif;
+    --page_font_family: Inter, sans-serif;
     --hover_color: #F2F3F4;
     --active_color: #D7DBDD;
     --canvas_wrapping_color: #F8F9F9;
@@ -16,8 +16,9 @@
 .header {
     /*box-shadow: rgb(99 99 99 / 20%) 0 2px 2px 0;*/
     /*box-shadow: 0 0.5px 2px #d1d1d1;*/
+    /*border-bottom: solid 1px var(--border_color);*/
     border-bottom: solid 1px var(--border_color);
-    font-family: sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .header .navbar {
@@ -25,8 +26,12 @@
     background-color: white;
 }
 
-.header .navbar .container-fluid .navbar-nav a {
+#upper-right-content a {
     font-size: 16px;
+}
+
+#upper-right-content a:hover {
+    color: white;
 }
 
 .navbar-brand {
@@ -51,16 +56,12 @@
     font-size: 18px;
 }
 
-.header .navbar .container-fluid .navbar-nav a:hover {
-    color: white;
-}
-
 @media screen and (max-width: 991px) {
     .front_nav {
         display: none;
     }
 
-    .header .navbar-collapse .navbar-nav button {
+    #upper-right-content a {
         margin-top: 6px;
         justify-content: center;
     }
@@ -71,8 +72,8 @@
     display: grid;
     grid-template-areas: "canvasSection sideSection";
     grid-template-columns: 7fr 4fr;
-    min-height: max(750px, calc(100vh - 66px));
-    overflow: hidden;
+    /*min-height: max(750px, calc(100vh - 66px));*/
+    height: calc(100vh - 66px);
 }
 
 /***** Canvas Section *****/
@@ -82,6 +83,7 @@
     display: grid;
     grid-template-areas: "action_sidebar canvas";
     grid-template-columns: 1fr 10fr;
+    height: inherit;
 }
 
 .action_sidebar {
@@ -144,12 +146,14 @@
     grid-template-areas: "SideContent SideSelection";
     grid-template-columns: 5fr 1fr;
     font-family: var(--page_font_family);
-    height: max(750px, calc(100vh - 66px));
+    /*height: max(750px, calc(100vh - 66px));*/
+    height: inherit;
 }
 
 .sideContent {
     overflow-x: hidden;
     overflow-y: auto;
+    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 1510px) and (min-width: 1310px) {
@@ -205,7 +209,7 @@
     background-position: 50% 50%;
 }
 
-.algo_panel .card {
+.algo_panel .card, #tutorialModal .card {
     border: 0;
     width: 180px;
     height: 130px;
@@ -215,36 +219,32 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.algo_panel .card-body {
+.algo_panel .card-body, #tutorialModal .card-body {
     padding: 10px 12px;
 }
 
-.algo_panel .card:hover {
+.algo_panel .card:hover, #tutorialModal .card:hover {
     cursor: pointer;
     background-color: var(--hover_color);
 }
 
-.algo_panel .card:active {
+.algo_panel .card:active, #tutorialModal .card:active {
     cursor: pointer;
     background-color: var(--active_color);
 }
 
-.algo_panel h5 {
+.algo_panel h5, #tutorialModal .card h5 {
     font-size: 0.9rem;
 }
 
-.algo_panel .card-title {
+.algo_panel .card-title, #tutorialModal .card-title {
     margin: 0;
 }
 
 /***************************/
 /***** Parameter Panel *****/
 /***************************/
-.param_panel .inner_param {
-
-}
-
-.param_panel .inner_param .input-group {
+.inner_param .input-group {
     /*display: none;*/
     /*display: flex;*/
     /*flex-flow: row wrap;*/
@@ -256,8 +256,30 @@
     justify-content: center;
 }
 
+#param-dropdown {
+    flex-grow: 1;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    color: dimgray;
+}
+
+li .form-control {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+li .input-group {
+    width: 90%;
+    justify-content: center;
+}
+
+li button {
+    flex-grow: 1;
+}
+
 /***** For shorter param panel *****/
-.param_panel .inner_param .shorter_param .input-group {
+.shorter_param .input-group:not(ul .input-group) {
     margin-bottom: 10px;
     width: 200px;
 }
@@ -265,15 +287,11 @@
 .param_panel .shorter_param {
     display: grid;
     grid-template-columns: auto auto;
-    justify-items: center;
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
-    /*justify-content: flex-start;*/
-    /*width: 80%;*/
+    justify-content: space-evenly;
 }
 
 /***** For checkbox param panel *****/
-.param_panel .inner_param .checkbox_param .input-group {
+.checkbox_param .input-group {
     flex-wrap: nowrap;
     margin-bottom: 10px;
     width: 200px;
@@ -282,21 +300,21 @@
 .param_panel .checkbox_param {
     display: grid;
     grid-template-columns: auto auto;
-    justify-items: center;
+    justify-content: space-evenly;
 }
 
-.param_panel .inner_param .checkbox_param span {
+.checkbox_param span {
     width: inherit;
     overflow: hidden;
 }
 
 /***** For longer param panel *****/
-.param_panel .inner_param .longer_param .input-group {
+.longer_param .input-group:not(ul .input-group) {
     width: fit-content;
     margin-bottom: 10px;
 }
 
-.param_panel .inner_param .longer_param .form-control {
+.longer_param .form-control {
     width: 70px;
 }
 
@@ -307,11 +325,11 @@
 }
 
 /***** General *****/
-.param_panel .inner_param .input-group-text {
+.inner_param .input-group-text {
     background-color: var(--input_group_text_color);
 }
 
-.param_panel .current_param_name strong {
+.current_param_name strong {
     font-size: 23px;
     padding: 0px;
     padding-left: 10px;
@@ -333,41 +351,41 @@
 
 }
 
-.history_panel .inner_his .card {
+.inner_his .card {
     width: 90%;
     border: none;
     box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
     margin: 0 auto 1rem;
 }
 
-.history_panel .inner_his .card-body {
+.inner_his .card-body {
     height: inherit;
     padding-top: 10px;
     padding-bottom: 10px;
     overflow-y: auto;
 }
 
-.history_panel .inner_his ul {
+.inner_his ul {
     padding-left: 1rem;
     margin: 0;
     column-count: 2;
 }
 
-.history_panel .inner_his .row {
+.inner_his .row {
     flex-wrap: nowrap;
 }
 
-.history_panel .inner_his .col-4 {
+.inner_his .col-4 {
     width: 100px;
     height: 100px;
 }
 
-.history_panel .inner_his img {
+.inner_his img {
     max-height: 100%;
     max-width: 100%;
 }
 
-.history_panel .inner_his .col-8 {
+.inner_his .col-8 {
     flex-grow: 100;
     height: 100px;
 }
@@ -401,20 +419,12 @@
 }
 
 /******************************/
-/********** Offcanvas *********/
-/******************************/
-
-.sideSection .offcanvas {
-    overflow-y: auto;
-    width: 450px;
-}
-
-/******************************/
 /***** Side Selection Bar *****/
 /******************************/
 .sideSelection {
     padding: 1rem;
     border-left: solid 1px var(--border_color);
+    justify-content: center;
 }
 
 .sideSelection .nav-link {
@@ -432,6 +442,14 @@
 .sideSelection .nav-link.active {
     background-color: #7B7D7D;
     color: white;
+}
+
+/******************************/
+/********** Offcanvas *********/
+/******************************/
+.sideSection .offcanvas {
+    overflow-y: auto;
+    width: 450px;
 }
 
 /******************************/

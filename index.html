@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>AlgoArt Creator Studio</title>
-    <meta name="author" content="Platform developed by Xingyu Dong, Xinxin Li, and Michael Wehar">
+    <meta name="author" content="Platform developed by the AlgoArt team led by Michael Wehar.">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=850">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css?ver=4">
+    <link rel="stylesheet" href="styles.css?ver=5">
 </head>
 
 <body>
@@ -36,7 +36,7 @@
                 <!-- Right Side Buttons -->
                 <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavAltMarkup">
                     <!-- List of Buttons -->
-                    <div class="navbar-nav">
+                    <div id="upper-right-content" class="navbar-nav">
                         <!-- Back to Gallery Button -->
                         <a type="button" class="btn btn-outline-secondary" role="button"
                             href="https://github.com/Algorithmically-Generated-Artwork/Drawing-Program"
@@ -166,7 +166,10 @@
                             <div class="param_choices" style="margin-top: 10px; margin-bottom: 20px">
                                 <div class="btn-group" role="group" aria-label="param_choices">
                                     <button type="button" class="btn btn-outline-secondary" id="default"
-                                            style="border-right: none" onclick="set_to_default()">Default
+                                            onclick="set_to_default()" style="border-right: none">Default
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary" id="randomize"
+                                            onclick="randomize_params()" style="border-right: none">Randomize
                                     </button>
                                     <button type="button" class="btn btn-outline-secondary" id="save"
                                             onclick="save_params()">Save
@@ -232,7 +235,7 @@
                                     </li>
                                 </ul>
                                 <p>
-                                    To see more artworks, please visit <a href="https://algoart.org/top_images.html">Our Gallery</a> and select your favorites!  Also, visit our <a href="https://github.com/Algorithmically-Generated-Artwork/Drawing-Program">GitHub Repo</a> to create your own drawing algorithms using our framework!
+                                    To see more artworks, please visit <a href="https://algoart.org/gallery.html">Our Gallery</a> and select your favorites!  Also, visit our <a href="https://github.com/Algorithmically-Generated-Artwork/Drawing-Program">GitHub Repo</a> to create your own drawing algorithms using our framework!
                                 </p>
                                 <div class="hr-solid" style="padding-top: 8px;"></div>
                                 <p>
@@ -255,7 +258,7 @@
                                 <div class="hr-solid" style="padding-top: 8px;"></div>
                                 <h5 style="font-weight: bold">Credits</h5>
                                 <p>
-                                    The AlgoArt Platform was developed by Swarthmore College faculty member Michael Wehar and student researchers Xingyu (Kevin) Dong, Xinxin Li, Maya Newman-Toker, and Alyssa Zhang.  Special thanks to all friends and collaborators who offered help!
+                                    The AlgoArt Platform was developed by Swarthmore College faculty member M. Wehar and student researchers X. Dong, J. Gallardo Moreno, O. Khan, X. Li, M. Newman-Toker, R. Oet, V. Sumano, L. Suresh, and A. Zhang. Special thanks to all friends and collaborators who offered help!
                                 </p>
                                 <p class="about-libraries">
                                     * This platform was developed using the <a href="https://github.com/jquery/jquery">JQuery</a> and <a href="https://github.com/twbs/bootstrap">Bootstrap</a> libraries as well as <a href="https://github.com/twbs/icons">Bootstrap Icons</a> which were made available under <a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>.
