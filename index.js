@@ -61,6 +61,7 @@ function enableOptionalButtons() {
   // Randomize button
   if("randomize" in algorithms[currentSelection - 1]) {
     // document.getElementById("randomize").disabled = false;
+    document.getElementById("randomize").style.display = "block";
   } else {
     // document.getElementById("randomize").disabled = true;
     document.getElementById("randomize").style.display = "none";
