@@ -25,37 +25,15 @@
 
 ![Web Interface Screenshot](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/web_interface.png)
 
-## Our Algorithms
+## Open Source Algorithms
 
-### algDots (Simple Example)
+| Animation | Name | Author | Description |
+|-----------|------|--------|-------------|
+| ![algDots Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algDots.gif) | algDots | Michael Wehar | This is a sample drawing algorithm that is meant for viewers to understand the programming framework that is used to create a new drawing algorithm.  We encourage you to clone our repo and try modifying this code to build your own drawing algorithm.  If you do so, **please consider sharing your resulting artworks with us** and [submit a pull request](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/pulls)! |
+| ![algGP Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algGP.gif) | [Geometric Patterns](https://michaelwehar.wordpress.com/2022/06/16/algorithmically-generated-visual-designs-geometric-patterns/) | Michael Wehar | This drawing program takes in over 30 different parameters representing line length, line thickness, rotation angles, color variations, background color blending, line sparsity, and whether intersecting lines are allowed. Based on these parameters and a random number generator, the drawing program generates different kinds of repeated geometric patterns. All of the generated patterns are drawn line by line on a digital canvas. |
+| ![algVines Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algVines.gif) | [Vines](https://michaelwehar.wordpress.com/2022/07/23/algorithmically-generated-visual-designs-5-vines/) | Alyssa Zhang | This algorithm, called "Vines", operates by drawing a variety of shapes across a canvas following certain kinds of paths. These paths that the vines follow are determined by various mathematical formulas. In particular, there are four kinds of paths: a random path, a linear path, a spiral path, and a path determined by a sine function. |
 
-This is a sample drawing algorithm that is meant for viewers to understand the programming framework that is used to create a new drawing algorithm.  We encourage you to clone our repo and try modifying this code to build your own drawing algorithm.  If you do so, **please consider sharing your resulting artworks with us** and [submit a pull request](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/pulls)!
-
-Example Drawing:
-
-![algDots Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algDots.gif)
-
-### algGP (Mike's Geometric Patterns)
-
-This drawing program takes in over 30 different parameters representing line length, line thickness, rotation angles, color variations, background color blending, line sparsity, and whether intersecting lines are allowed. Based on these parameters and a random number generator, the drawing program generates different kinds of repeated geometric patterns. All of the generated patterns are drawn line by line on a digital canvas.
-
-Example Drawing:
-
-![algGP Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algGP.gif)
-
-Blog Article: https://michaelwehar.wordpress.com/2022/06/16/algorithmically-generated-visual-designs-geometric-patterns/
-
-### algVines (Alyssa's Vines)
-
-This algorithm, called "Vines", operates by drawing a variety of shapes across a canvas following certain kinds of paths. These paths that the vines follow are determined by various mathematical formulas. In particular, there are four kinds of paths: a random path, a linear path, a spiral path, and a path determined by a sine function.
-
-Example Drawing:
-
-![algVines Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algVines.gif)
-
-Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-generated-visual-designs-5-vines/
-
-## List of Algorithms and Blog Posts
+## Extended List of Algorithms and Blog Posts
 
 - [Wrapping Paper](https://michaelwehar.wordpress.com/2022/06/14/algorithmically-generated-visual-designs-wrapping-paper/) by A. Zhang
 - [Geometric Patterns](https://michaelwehar.wordpress.com/2022/06/16/algorithmically-generated-visual-designs-geometric-patterns/) by M. Wehar
@@ -74,7 +52,7 @@ Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-gene
 - [Constellations](https://michaelwehar.wordpress.com/2025/03/11/algoart-15-consellations/) by J. Gallardo Moreno
 - [Voronoi](https://michaelwehar.wordpress.com/2025/03/12/algoart-16-voronoi/) by J. Gallardo Moreno
 
-## Articles, Presentations, and Links
+## Publications
 
 *Academic Papers & Posters*
 
@@ -99,9 +77,8 @@ Blog Article: https://michaelwehar.wordpress.com/2022/07/23/algorithmically-gene
 - [AI Generated Digital Painting from Start to Finish](https://www.aiplusinfo.com/blog/ai-generated-digital-painting-from-start-to-finish/) (Artificial Intelligence + Guest Blog)
 <!--- - [Algorithmically Generated Visual Art](https://alyssazhang.squarespace.com/work/algorithmically-generated-artwork) by Alyssa Zhang --->
 
-*More Links*
-
-- [Reviewer Sign-up Form for Computer Generated Artwork](https://docs.google.com/forms/d/e/1FAIpQLSdhmHGGojQslun9Fp3AZL7hCYHlfo9F8SGW5YX-YMTFrR13Dw/viewform)
+<!--- *More Links* --->
+<!--- - [Reviewer Sign-up Form for Computer Generated Artwork](https://docs.google.com/forms/d/e/1FAIpQLSdhmHGGojQslun9Fp3AZL7hCYHlfo9F8SGW5YX-YMTFrR13Dw/viewform) --->
 
 ## Contributors
 
@@ -146,7 +123,7 @@ During Spring 2023, students from [CS410](https://cs410.net) @ UMass Boston fork
 
 *Special thanks D. Haehn, S. Raikar, and to all of those who offered help!*
 
-## License and Libraries
+## Licenses and Libraries
 
 The code in this repository is made available under MIT License.
 
