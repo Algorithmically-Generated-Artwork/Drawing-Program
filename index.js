@@ -1,8 +1,8 @@
 // Algorithms set up
-var algShortName = ["algGP", "algVines", "algDots"];
-var algNames = ["Geometric Patterns", "Vines", "Dots (Simple Example)"];
-var algCredits = ["Geometric Patterns by Michael Wehar", "Vines by Alyssa Zhang", "Modify This Algorithm!"];
-var algorithms = [algGP, algVines, algDots];
+var algShortName = ["algGP", "algVines", "algCS", "algVD", "algCL", "algDots"];
+var algNames = ["Geometric Patterns", "Vines", "Constellations", "Voronoi", "Collisions", "Dots (Simple Example)"];
+var algCredits = ["Geometric Patterns by Michael Wehar", "Vines by Alyssa Zhang", "Constellations by Jhovani Gallardo Moreno", "Voronoi by Jhovani Gallardo Moreno", "Collisions by Omar Khan", "Modify This Algorithm!"];
+var algorithms = [algGP, algVines, algCS, algVD, algCL, algDots];
 var algorithmsPaused = [];
 for (let i = 0; i < algorithms.length; i++) {
     algorithms[i].initialize();
@@ -122,16 +122,13 @@ function clearCanvas() {
     ctx.clearRect(0, 0, width, height);
 }
 
-// Save canvas as jpg
+// Save canvas as png
 function saveCanvas() {
     var link = document.getElementById('link');
-    link.setAttribute('download', 'artwork.jpg');
-    link.setAttribute('href', c.toDataURL("image/jpg").replace("image/jpg", "image/octet-stream"));
+    link.setAttribute('download', 'artwork.png');
+    link.setAttribute('href', c.toDataURL("image/png").replace("image/png", "image/octet-stream"));
     link.click();
-    // var canvas_jpg = c.toDataURL("canvas/jpg").replace("image/jpg", "image/octet-stream");
-    // window.location.href = canvas_jpg;
 }
-
 
 /******** Updating functionalities of the Website ********/
 
