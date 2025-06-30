@@ -60,7 +60,7 @@
 
 *Academic Papers & Posters*
 
-- Creating Variation When Building Image Generation Datasets by J. Gallardo Moreno, O. Khan, and M. Wehar (To Appear, Bridges 2025)
+- [Creating Variation When Building Image Generation Datasets](https://archive.bridgesmathart.org/2025/bridges2025-507.html) by J. Gallardo Moreno, O. Khan, and M. Wehar (Bridges 2025)
 - [Students Teaching Students Computer Art and Graphics](https://diglib.eg.org/items/107b62b8-4c4f-4c17-af21-cac792069f21) by M. Wehar (Eurographics 2025)
 - [Creating Patterns with Distance Functions & Voronoi Diagrams](https://dl.acm.org/doi/10.1145/3722564.3728384) by J. Gallardo Moreno and M. Wehar (I3D 2025)
 
