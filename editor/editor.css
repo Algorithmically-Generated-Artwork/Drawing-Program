@@ -1,0 +1,166 @@
+.toolbar {
+  box-sizing: border-box;
+  width: 800px;
+  height: 50px;
+  padding: 0px;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+}
+.editor-wrapper {
+  width: 800px;
+  height: 500px;
+  display: flex;
+  position: relative;
+}
+.line-numbers {
+  width: 65px;
+  height: 500px;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: rgb(198, 198, 198);
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+  resize: none;
+  overflow-y: hidden;
+}
+.line-numbers:disabled {
+  -webkit-opacity: 1;
+}
+.code-editor {
+  width: 735px;
+  height: 500px;
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: bold;
+  outline: none;
+  resize: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-head {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 8px;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+.dropdown-body {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  border-radius: 5px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-option {
+  width: 160px;
+  color: black;
+  background-color: white;
+  padding: 8px;
+  border: none;
+  font-size: 12px;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.dropdown-option:hover {
+  background-color: #2774F0;
+  border-radius: 0px;
+}
+.show {
+  display: block;
+}
+.overlay {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-width: 0px;
+  background-color: rgba(50, 50, 50, 0.8);
+}
+#colorsOverlay {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+#statisticsOverlay {
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.overlay label {
+  color: white;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: bold;
+  margin-left: 50px;
+}
+.X-button {
+  position: absolute;
+  left: 91.5%;
+  color: white;
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.overlay-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 80%;
+  font-size: 18px;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.editor-wrapper textarea {
+  margin: 0px;
+}
+.overlay p {
+  font-size: 18px;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
+  margin-left: 25%;
+}
+.action-button {
+  background-color: black;
+  color: white;
+  width: auto;
+  padding: 5px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 8px;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
