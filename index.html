@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>AlgoArt Creator Studio</title>
     <meta name="author" content="Platform developed by the AlgoArt team led by Michael Wehar.">
@@ -7,10 +8,10 @@
     <meta name="viewport" content="width=850">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"></script>
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css?ver=5">
     <link rel="stylesheet" href="editor/editor.css">
 </head>
@@ -21,7 +22,8 @@
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container-fluid">
                 <!-- Website Title -->
-                <h1><a class="navbar-brand" href="https://algoart.org"><span>AlgoArt</span><span class="dot-org">.org</span></a></h1>
+                <h1><a class="navbar-brand" href="https://algoart.org"><span>AlgoArt</span><span
+                            class="dot-org">.org</span></a></h1>
                 <!-- Subtitle -->
                 <div class="front_nav">
                     <div class="navbar-nav">
@@ -30,8 +32,9 @@
                     </div>
                 </div>
                 <!-- Button for smaller browser display -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Right Side Buttons -->
@@ -42,10 +45,13 @@
                         <a type="button" class="btn btn-outline-secondary" role="button"
                             href="https://github.com/Algorithmically-Generated-Artwork/Drawing-Program"
                             style="margin-right: 5px; display: flex; align-items: center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
-                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
-                                </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor"
+                                class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                            </svg>
                             &nbsp; GitHub Repository
                         </a>
                     </div>
@@ -60,62 +66,59 @@
             <!-- Actions -->
             <div class="action_sidebar">
                 <!-- Start/Pause Button -->
-                <button type="button" class="btn" onclick="start()"
-                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Start"
-                        data-bs-custom-class="custom-tooltip"
-                        id="start_pause_button">
+                <button type="button" class="btn" onclick="start()" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-title="Start" data-bs-custom-class="custom-tooltip" id="start_pause_button">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-circle"
-                         viewBox="0 0 17 17"
-                         id="startButton" style="color: forestgreen">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                        viewBox="0 0 17 17" id="startButton" style="color: forestgreen">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
                     </svg>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-pause-circle"
-                         viewBox="0 0 17 17"
-                         id="pauseButton" style="display: none; color: indianred">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        viewBox="0 0 17 17" id="pauseButton" style="display: none; color: indianred">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                         <path d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25
-                        1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"/>
+                        1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z" />
                     </svg>
                 </button>
                 <!-- Reset Button -->
-                <button type="button" class="btn" onclick="reset()"
-                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Reset"
-                        data-bs-custom-class="custom-tooltip">
+                <button type="button" class="btn" onclick="reset()" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-title="Reset" data-bs-custom-class="custom-tooltip">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-clockwise"
-                         viewBox="0 0 17 17" style="color: dodgerblue">
-                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                        viewBox="0 0 17 17" style="color: dodgerblue">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                        <path
+                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
                     </svg>
                 </button>
                 <!-- Clear Canvas Button -->
-                <button type="button" class="btn" onclick="clearCanvas()"
-                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Clear"
-                        data-bs-custom-class="custom-tooltip">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 17 17"
-                         style="color: orangered">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707
-                    8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                <button type="button" class="btn" onclick="clearCanvas()" data-bs-toggle="tooltip"
+                    data-bs-placement="top" data-bs-title="Clear" data-bs-custom-class="custom-tooltip">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-circle"
+                        viewBox="0 0 17 17" style="color: orangered">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707
+                    8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                     </svg>
                 </button>
                 <!-- Save Image Button -->
-                <button type="button" class="btn" onclick="saveCanvas()"
-                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Save"
-                        data-bs-custom-class="custom-tooltip">
+                <button type="button" class="btn" onclick="saveCanvas()" data-bs-toggle="tooltip"
+                    data-bs-placement="top" data-bs-title="Save" data-bs-custom-class="custom-tooltip">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-box-arrow-down"
-                         viewBox="0 0 17 17" style="color: #F4D03F">
+                        viewBox="0 0 17 17" style="color: #F4D03F">
                         <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0
                     1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5
-                    1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z"/>
+                    1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z" />
                         <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5
-                    14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                    14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
                     </svg>
                 </button>
             </div>
             <!-- Canvas -->
             <div class="canvas_wrapper">
-                <canvas id="myCanvas" class="canvas" width="600" height="600">Your browser does not support the HTML5 canvas
+                <canvas id="myCanvas" class="canvas" width="600" height="600">Your browser does not support the HTML5
+                    canvas
                     tag.
                 </canvas>
             </div>
@@ -127,14 +130,14 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <!-- Algo Panel -->
                     <div class="tab-pane fade show active" id="v-pills-algo" role="tabpanel"
-                         aria-labelledby="v-pills-algo-tab" tabindex="0">
+                        aria-labelledby="v-pills-algo-tab" tabindex="0">
                         <div class="algo_panel">
                             <!-- Panel Title -->
                             <strong class="d-flex w-100 align-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-code-slash"
-                                     viewBox="0 0 16 16"
-                                     style="color: forestgreen">
-                                    <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                                    viewBox="0 0 16 16" style="color: forestgreen">
+                                    <path
+                                        d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
                                 </svg>
                                 &nbsp;Algorithm Lists
                             </strong>
@@ -144,51 +147,52 @@
                     </div>
                     <!-- Parameter Panel -->
                     <div class="tab-pane fade" id="v-pills-params" role="tabpanel" aria-labelledby="v-pills-params-tab"
-                         tabindex="0">
+                        tabindex="0">
                         <div class="param_panel">
                             <!-- Panel Name -->
                             <strong class="d-flex w-100 align-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list-nested"
-                                     viewBox="0 0 16 16"
-                                     style="color: dodgerblue">
+                                    viewBox="0 0 16 16" style="color: dodgerblue">
                                     <path fill-rule="evenodd"
-                                          d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+                                        d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
                                 </svg>
                                 &nbsp;Parameter Panel
                             </strong>
                             <!-- Name of the current algorithm -->
                             <div class="current_param_name">
                                 <strong>
-                                    Selected: <span class="current_algo"
-                                                    style="display: inline-flex"></span>
+                                    Selected: <span class="current_algo" style="display: inline-flex"></span>
                                 </strong>
                             </div>
                             <!-- Parameter General Choices (e.g. default, save, randomize) -->
                             <div class="param_choices" style="margin-top: 10px; margin-bottom: 20px">
                                 <div class="btn-group" role="group" aria-label="param_choices">
                                     <button type="button" class="btn btn-outline-secondary" id="default"
-                                            onclick="set_to_default()" style="border-right: none">Default
+                                        onclick="set_to_default()" style="border-right: none">Default
                                     </button>
                                     <button type="button" class="btn btn-outline-secondary" id="randomize"
-                                            onclick="randomize_params()" style="border-right: none">Randomize
+                                        onclick="randomize_params()" style="border-right: none">Randomize
                                     </button>
                                     <button type="button" class="btn btn-outline-secondary" id="save"
-                                            onclick="save_params()">Save
+                                        onclick="save_params()">Save
                                     </button>
                                 </div>
                             </div>
                             <!-- List of Parameters (all parameters are generated dynamically) -->
                             <div class="inner_param" id="inner_param">
                                 <div class="hr-solid" style="margin-bottom: 2px"></div>
-                                <strong class="d-flex w-100 align-items-center" style="font-size: 21px; margin-bottom: 5px">Boolean Params</strong>
+                                <strong class="d-flex w-100 align-items-center"
+                                    style="font-size: 21px; margin-bottom: 5px">Boolean Params</strong>
                                 <!-- Parameters that are shorter -->
                                 <div class="checkbox_param" id="checkbox_param"></div>
                                 <div class="hr-solid" style="margin-bottom: 2px"></div>
-                                <strong class="d-flex w-100 align-items-center" style="font-size: 21px; margin-bottom: 5px">Numeric & String Params</strong>
+                                <strong class="d-flex w-100 align-items-center"
+                                    style="font-size: 21px; margin-bottom: 5px">Numeric & String Params</strong>
                                 <!-- Parameters that are checkboxes -->
                                 <div class="shorter_param" id="shorter_param"></div>
                                 <div class="hr-solid" style="margin-bottom: 2px"></div>
-                                <strong class="d-flex w-100 align-items-center" style="font-size: 21px; margin-bottom: 5px">Longer Params</strong>
+                                <strong class="d-flex w-100 align-items-center"
+                                    style="font-size: 21px; margin-bottom: 5px">Longer Params</strong>
                                 <!-- Parameters that are longer -->
                                 <div class="longer_param" id="longer_param"></div>
                                 <br>
@@ -197,22 +201,21 @@
                     </div>
                     <!-- Editor Panel -->
                     <div class="tab-pane fade" id="v-pills-code" role="tabpanel" aria-labelledby="v-pills-code-tab"
-                         tabindex="0">
+                        tabindex="0">
                         <div id="code_panel" class="code_panel">
                             <!-- Panel Name -->
                             <strong class="d-flex w-100 align-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-javascript"
-                                     viewBox="0 0 16 16"
-                                     style="color: forestgreen">
-                                     <path fill-rule="evenodd" d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"/>
+                                    viewBox="0 0 16 16" style="color: forestgreen">
+                                    <path fill-rule="evenodd"
+                                        d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518" />
                                 </svg>
                                 &nbsp;Editor Panel
                             </strong>
                             <!-- Name of the current algorithm -->
                             <div class="current_param_name">
                                 <strong>
-                                    Selected: <span class="current_algo"
-                                                    style="display: inline-flex"></span>
+                                    Selected: <span class="current_algo" style="display: inline-flex"></span>
                                 </strong>
                             </div>
                             <br>
@@ -224,23 +227,27 @@
                     </div>
                     <!-- About Panel -->
                     <div class="tab-pane fade" id="v-pills-about" role="tabpanel" aria-labelledby="v-pills-about-tab"
-                         tabindex="0">
+                        tabindex="0">
                         <div class="about_panel">
                             <!-- Panel Name -->
                             <strong class="d-flex w-100 align-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle"
-                                     viewBox="0 0 16 16"
-                                     style="color: #F4D03F">
-                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                    viewBox="0 0 16 16" style="color: #F4D03F">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path
+                                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                                 </svg>
                                 &nbsp;About
                             </strong>
                             <!-- Website Description -->
-                            <div class="inner_about" id="inner_about" style="padding: 8px; padding-left: 18px; padding-right: 18px;">
+                            <div class="inner_about" id="inner_about"
+                                style="padding: 8px; padding-left: 18px; padding-right: 18px;">
                                 <h4 style="font-weight: bold">Welcome to the Creator Studio!</h4>
                                 <p>
-                                    <a href="https://algoart.org">AlgoArt.org</a> is a digital platform that brings together Artists and Technologists to create algorithmically generated visual designs and artworks.  Using our Creator Studio, you can generate your own unique artworks!
+                                    <a href="https://algoart.org">AlgoArt.org</a> is a digital platform that brings
+                                    together Artists and Technologists to create algorithmically generated visual
+                                    designs and artworks. Using our Creator Studio, you can generate your own unique
+                                    artworks!
                                 </p>
                                 <p>
                                     Here is how to get started!
@@ -250,46 +257,62 @@
                                         Select an Algorithm from our Algorithm List.
                                     </li>
                                     <li>
-                                        Go to the Params Tab, then adjust parameters by clicking checkboxes or typing into textboxes and pressing enter.
+                                        Go to the Params Tab, then adjust parameters by clicking checkboxes or typing
+                                        into textboxes and pressing enter.
                                     </li>
                                     <li>
                                         Press the Start Button to create your own artwork!
                                     </li>
                                     <li>
-                                        You can pause and start again at anytime.  You can restart by clicking the Reset Button and clear the canvas by clicking the Clear Button.
+                                        You can pause and start again at anytime. You can restart by clicking the Reset
+                                        Button and clear the canvas by clicking the Clear Button.
                                     </li>
                                     <li>
                                         Finally, be sure to click the Save Button to download your masterpiece!
                                     </li>
                                 </ul>
                                 <p>
-                                    To see more artworks, please visit <a href="https://algoart.org/gallery.html">Our Gallery</a> and select your favorites!  Also, visit our <a href="https://github.com/Algorithmically-Generated-Artwork/Drawing-Program">GitHub Repo</a> to create your own drawing algorithms using our framework!
+                                    To see more artworks, please visit <a href="https://algoart.org/gallery.html">Our
+                                        Gallery</a> and select your favorites! Also, visit our <a
+                                        href="https://github.com/Algorithmically-Generated-Artwork/Drawing-Program">GitHub
+                                        Repo</a> to create your own drawing algorithms using our framework!
                                 </p>
                                 <div class="hr-solid" style="padding-top: 8px;"></div>
                                 <p>
-                                  To learn more about our drawing algorithms and platform, see the following videos:
+                                    To learn more about our drawing algorithms and platform, see the following videos:
                                 </p>
-                                <h5 style="font-weight: bold; padding-bottom: 5px;">Demonstration of Drawing Algorithms</h5>
+                                <h5 style="font-weight: bold; padding-bottom: 5px;">Demonstration of Drawing Algorithms
+                                </h5>
                                 <p style="margin: 0; text-align: center">
                                     <a href="https://www.youtube.com/watch?v=SGNbv__s0rI">
-                                        <img class="video-preview" title="Demonstration Video" src="video_preview/image1.png">
+                                        <img class="video-preview" title="Demonstration Video"
+                                            src="video_preview/image1.png">
                                     </a>
                                 </p>
                                 <div style="padding-top: 13px;"></div>
-                                <h5 style="font-weight: bold; padding-bottom: 5px;">Talk About How Our Platform Works</h5>
+                                <h5 style="font-weight: bold; padding-bottom: 5px;">Talk About How Our Platform Works
+                                </h5>
                                 <p style="margin: 0; text-align: center">
                                     <a href="https://www.youtube.com/watch?v=0Ts7Sa_z69Y&t=46s">
-                                        <img class="video-preview" title="Educational Video" src="video_preview/image2.png">
+                                        <img class="video-preview" title="Educational Video"
+                                            src="video_preview/image2.png">
                                     </a>
                                 </p>
                                 <div style="padding-top: 13px;"></div>
                                 <div class="hr-solid" style="padding-top: 8px;"></div>
                                 <h5 style="font-weight: bold">Credits</h5>
                                 <p>
-                                    The AlgoArt Platform was developed by Swarthmore College faculty member M. Wehar and student researchers X. Dong, J. Gallardo Moreno, O. Khan, X. Li, M. Newman-Toker, R. Oet, V. Sumano, L. Suresh, and A. Zhang. Special thanks to all friends and collaborators who offered help!
+                                    The AlgoArt Platform was developed by Swarthmore College faculty member M. Wehar and
+                                    student researchers X. Dong, J. Gallardo Moreno, O. Khan, X. Li, M. Newman-Toker, R.
+                                    Oet, V. Sumano, L. Suresh, and A. Zhang. Special thanks to all friends and
+                                    collaborators who offered help!
                                 </p>
                                 <p class="about-libraries">
-                                    * This platform was developed using the <a href="https://github.com/jquery/jquery">JQuery</a> and <a href="https://github.com/twbs/bootstrap">Bootstrap</a> libraries as well as <a href="https://github.com/twbs/icons">Bootstrap Icons</a> which were made available under <a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>.
+                                    * This platform was developed using the <a
+                                        href="https://github.com/jquery/jquery">JQuery</a> and <a
+                                        href="https://github.com/twbs/bootstrap">Bootstrap</a> libraries as well as <a
+                                        href="https://github.com/twbs/icons">Bootstrap Icons</a> which were made
+                                    available under <a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>.
                                 </p>
                             </div>
                         </div>
@@ -299,31 +322,30 @@
             <!-- Selection Buttons -->
             <div class="sideSelection" style="display: flex">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"
-                     style="justify-content: center">
+                    style="justify-content: center">
                     <button class="nav-link active" id="v-pills-algo-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-algo" type="button" role="tab" aria-controls="v-pills-algo"
-                            aria-selected="true">Algos
+                        data-bs-target="#v-pills-algo" type="button" role="tab" aria-controls="v-pills-algo"
+                        aria-selected="true">Algos
                     </button>
                     <button class="nav-link" id="v-pills-params-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-params" type="button" role="tab" aria-controls="v-pills-params"
-                            aria-selected="false">Params
+                        data-bs-target="#v-pills-params" type="button" role="tab" aria-controls="v-pills-params"
+                        aria-selected="false">Params
                     </button>
-                    <button class="nav-link" id="v-pills-code-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-code" type="button" role="tab" aria-controls="v-pills-code"
-                            aria-selected="false">Editor
+                    <button class="nav-link" id="v-pills-code-tab" data-bs-toggle="pill" data-bs-target="#v-pills-code"
+                        type="button" role="tab" aria-controls="v-pills-code" aria-selected="false">Editor
                     </button>
                     <button class="nav-link" id="v-pills-about-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-about" type="button" role="tab" aria-controls="v-pills-about"
-                            aria-selected="false" style="margin-top: auto; margin-bottom: 0">About
+                        data-bs-target="#v-pills-about" type="button" role="tab" aria-controls="v-pills-about"
+                        aria-selected="false" style="margin-top: auto; margin-bottom: 0">About
                     </button>
                 </div>
             </div>
             <!-- Offcanvas for smaller browser display -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                 aria-labelledby="offcanvasRightLabel">
+                aria-labelledby="offcanvasRightLabel">
                 <!-- for closing the offcanvas -->
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                        aria-label="Close" id="offcanvas_close" style="display: none"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                    id="offcanvas_close" style="display: none"></button>
             </div>
         </div>
     </div>
@@ -340,6 +362,7 @@
         var width = c.width;
         var height = c.height;
     </script>
+    <script src="utils.js"></script>
     <script src="algGP.js"></script>
     <script src="algGP_params.js"></script>
     <script src="algVines.js"></script>
@@ -350,6 +373,8 @@
     <script src="algVD_params.js"></script>
     <script src="algCL.js"></script>
     <script src="algCL_params.js"></script>
+    <script src="algTartan.js"></script>
+    <script src="algTartan_params.js"></script>
     <script src="algDots.js"></script>
     <script src="algDots_params.js"></script>
     <script src="index.js"></script>
@@ -357,40 +382,41 @@
     <!-- Editor -->
     <script src="editor/editor.js?ver=1"></script>
     <script>
-      // Settings
-      var mySettings = {
-        "width": 625,
-        "height": 485,
-        "color": "#f2f2f2",
-        "backgroundColor": "#114f11",
-        "fontFamily": "Monospace",
-        "fontSize": 15,
-        "toolBarBackgroundColor": "#000000",
-        "toolBarTextColor": "#e0e0e0",
-        "toolBarButtonColor": "#222222",
-        "tabLoad": 1,
-        "textWrapLoad": 1,
-        "parensLoad": 1,
-        "hideToolbar": false,
-        "dropdownMode": "custom",
-        "dropdownSettings":[{"id": "menu1", "label": "File", "options": [{"label": "Save", "onclick": "customSaveToTextFileWrapper(this, algShortName[currentSelection - 1] + '.js')"}]},
-          {"id": "menu2", "label": "Edit", "options": [{"label": "Editor Settings", "onclick": "showOverlayWrapper(this, 'tabOverlay')"}, {"label": "Find & Replace", "onclick": "showOverlayWrapper(this, 'findOverlay')"}]},
-          {"id": "menu3", "label": "View", "options": [{"label": "Font & Colors", "onclick": "showOverlayWrapper(this, 'colorsOverlay')"}, {"label": "Select Template", "onclick": "showOverlayWrapper(this, 'templatesOverlay')"}]}],
-        "actionButtonMode": "custom",
-        "actionButtonSettings": [{"id": "action1", "label": "Deploy Algo", "onclick": "evaluateActionButtonWrapper(this, (x) => {deployUpdatedAlgorithm(x);})"}]
-      };
-      // Create editor
-      var eName = "editor1";
-      generate_editor(eName + "-container", eName);
-      customizeEditor(eName, mySettings);
-      // Load code
-      loadCodeIntoEditor(eName, algorithms[currentSelection - 1], algShortName[currentSelection - 1]);
-      // Execute new code
-      function deployUpdatedAlgorithm(eName) {
-        let element = document.createElement("script");
-        element.textContent = getEditorText(eName);
-        document.body.appendChild(element);
-      }
+        // Settings
+        var mySettings = {
+            "width": 625,
+            "height": 485,
+            "color": "#f2f2f2",
+            "backgroundColor": "#114f11",
+            "fontFamily": "Monospace",
+            "fontSize": 15,
+            "toolBarBackgroundColor": "#000000",
+            "toolBarTextColor": "#e0e0e0",
+            "toolBarButtonColor": "#222222",
+            "tabLoad": 1,
+            "textWrapLoad": 1,
+            "parensLoad": 1,
+            "hideToolbar": false,
+            "dropdownMode": "custom",
+            "dropdownSettings": [{ "id": "menu1", "label": "File", "options": [{ "label": "Save", "onclick": "customSaveToTextFileWrapper(this, algShortName[currentSelection - 1] + '.js')" }] },
+            { "id": "menu2", "label": "Edit", "options": [{ "label": "Editor Settings", "onclick": "showOverlayWrapper(this, 'tabOverlay')" }, { "label": "Find & Replace", "onclick": "showOverlayWrapper(this, 'findOverlay')" }] },
+            { "id": "menu3", "label": "View", "options": [{ "label": "Font & Colors", "onclick": "showOverlayWrapper(this, 'colorsOverlay')" }, { "label": "Select Template", "onclick": "showOverlayWrapper(this, 'templatesOverlay')" }] }],
+            "actionButtonMode": "custom",
+            "actionButtonSettings": [{ "id": "action1", "label": "Deploy Algo", "onclick": "evaluateActionButtonWrapper(this, (x) => {deployUpdatedAlgorithm(x);})" }]
+        };
+        // Create editor
+        var eName = "editor1";
+        generate_editor(eName + "-container", eName);
+        customizeEditor(eName, mySettings);
+        // Load code
+        loadCodeIntoEditor(eName, algorithms[currentSelection - 1], algShortName[currentSelection - 1]);
+        // Execute new code
+        function deployUpdatedAlgorithm(eName) {
+            let element = document.createElement("script");
+            element.textContent = getEditorText(eName);
+            document.body.appendChild(element);
+        }
     </script>
 </body>
+
 </html>

@@ -1,8 +1,8 @@
 // Algorithms set up
-var algShortName = ["algGP", "algVines", "algCS", "algVD", "algCL", "algDots"];
-var algNames = ["Geometric Patterns", "Vines", "Constellations", "Voronoi", "Collisions", "Dots (Simple Example)"];
-var algCredits = ["Geometric Patterns by Michael Wehar", "Vines by Alyssa Zhang", "Constellations by Jhovani Gallardo Moreno", "Voronoi by Jhovani Gallardo Moreno", "Collisions by Omar Khan", "Modify This Algorithm!"];
-var algorithms = [algGP, algVines, algCS, algVD, algCL, algDots];
+var algShortName = ["algGP", "algVines", "algCS", "algVD", "algCL", "algTartan", "algDots"];
+var algNames = ["Geometric Patterns", "Vines", "Constellations", "Voronoi", "Collisions", "Tartan", "Dots (Simple Example)"];
+var algCredits = ["Geometric Patterns by Michael Wehar", "Vines by Alyssa Zhang", "Constellations by Jhovani Gallardo Moreno", "Voronoi by Jhovani Gallardo Moreno", "Collisions by Omar Khan", "Tartan by Patrick Tone", "Modify This Algorithm!"];
+var algorithms = [algGP, algVines, algCS, algVD, algCL, algTartan, algDots];
 var algorithmsPaused = [];
 for (let i = 0; i < algorithms.length; i++) {
     algorithms[i].initialize();
@@ -10,7 +10,7 @@ for (let i = 0; i < algorithms.length; i++) {
 }
 
 // Algorithm selection set up
-var currentSelection = 1;
+var currentSelection = algorithms.length; // 1;
 
 // parameter set up
 let all_params = param_initialize();
@@ -18,7 +18,7 @@ let params_store = create_params_store();
 param_display(all_params[currentSelection - 1]);
 
 function selectAlgorithm(id) {
-    $('#' + id).css({"border-color": "#86b7fe", "box-shadow": "0 0 0 .25rem rgba(13, 110, 253, .25)"});
+    $('#' + id).css({ "border-color": "#86b7fe", "box-shadow": "0 0 0 .25rem rgba(13, 110, 253, .25)" });
 }
 
 function deselectAlgorithm(id) {
@@ -45,12 +45,12 @@ function changeSelectionModified(id) {
         document.getElementById("startButton").style.display = "initial";
         document.getElementById("pauseButton").style.display = "none";
         const tooltip = bootstrap.Tooltip.getInstance("#start_pause_button");
-        tooltip.setContent({'.tooltip-inner': 'Start'});
+        tooltip.setContent({ '.tooltip-inner': 'Start' });
     } else {
         document.getElementById("startButton").style.display = "none";
         document.getElementById("pauseButton").style.display = "initial";
         const tooltip = bootstrap.Tooltip.getInstance("#start_pause_button");
-        tooltip.setContent({'.tooltip-inner': 'Pause'});
+        tooltip.setContent({ '.tooltip-inner': 'Pause' });
     }
 
     // Optional buttons
@@ -61,14 +61,14 @@ function changeSelectionModified(id) {
 }
 
 function enableOptionalButtons() {
-  // Randomize button
-  if("randomize" in algorithms[currentSelection - 1]) {
-    // document.getElementById("randomize").disabled = false;
-    document.getElementById("randomize").style.display = "block";
-  } else {
-    // document.getElementById("randomize").disabled = true;
-    document.getElementById("randomize").style.display = "none";
-  }
+    // Randomize button
+    if ("randomize" in algorithms[currentSelection - 1]) {
+        // document.getElementById("randomize").disabled = false;
+        document.getElementById("randomize").style.display = "block";
+    } else {
+        // document.getElementById("randomize").disabled = true;
+        document.getElementById("randomize").style.display = "none";
+    }
 }
 
 // Create cards function
@@ -97,14 +97,14 @@ function start() {
         document.getElementById("startButton").style.display = "none";
         document.getElementById("pauseButton").style.display = "initial";
         const tooltip = bootstrap.Tooltip.getInstance("#start_pause_button");
-        tooltip.setContent({'.tooltip-inner': 'Pause'});
+        tooltip.setContent({ '.tooltip-inner': 'Pause' });
         console.log("Started " + currentSelection);
     } else {
         algorithms[currentSelection - 1].pause();
         document.getElementById("startButton").style.display = "initial";
         document.getElementById("pauseButton").style.display = "none";
         const tooltip = bootstrap.Tooltip.getInstance("#start_pause_button");
-        tooltip.setContent({'.tooltip-inner': 'Start'});
+        tooltip.setContent({ '.tooltip-inner': 'Start' });
         console.log("Paused " + currentSelection);
     }
     algorithmsPaused[currentSelection - 1] = !algorithmsPaused[currentSelection - 1];
@@ -116,7 +116,7 @@ function reset() {
     document.getElementById("startButton").style.display = "initial";
     document.getElementById("pauseButton").style.display = "none";
     const tooltip = bootstrap.Tooltip.getInstance("#start_pause_button");
-    tooltip.setContent({'.tooltip-inner': 'Start'});
+    tooltip.setContent({ '.tooltip-inner': 'Start' });
     algorithmsPaused[currentSelection - 1] = true;
     console.log("Reset " + currentSelection);
 }
@@ -403,24 +403,24 @@ function checkEqual(first, second) {
  * params_store).
  */
 function updateParamValue(id, param, value) {
-  let param_id = id + "__" + param;
-  if (param.toLowerCase().includes("color") && Array.isArray(value) && value.length === 3 && typeof value[0] === "number") {
-      let hex_val = rgbToHex(value[0], value[1], value[2]);
-      $("#" + param_id).val(hex_val);
-      $("#" + param_id).trigger("change");
-  } else if(param.toLowerCase().includes("color") && typeof value === "string") {
-      let hex_val = stringColorToHex(value);
-      $("#" + param_id).val(hex_val);
-      $("#" + param_id).trigger("change");
-  } else if (Array.isArray(value)) {
-      setListOptionToDefault(param_id, param, value);
-  } else {
-      if (typeof value === "boolean") {
-          $("#" + param_id).prop('checked', value);
-      }
-      $("#" + param_id).val(value);
-      $("#" + param_id).trigger("change");
-  }
+    let param_id = id + "__" + param;
+    if (param.toLowerCase().includes("color") && Array.isArray(value) && value.length === 3 && typeof value[0] === "number") {
+        let hex_val = rgbToHex(value[0], value[1], value[2]);
+        $("#" + param_id).val(hex_val);
+        $("#" + param_id).trigger("change");
+    } else if (param.toLowerCase().includes("color") && typeof value === "string") {
+        let hex_val = stringColorToHex(value);
+        $("#" + param_id).val(hex_val);
+        $("#" + param_id).trigger("change");
+    } else if (Array.isArray(value)) {
+        setListOptionToDefault(param_id, param, value);
+    } else {
+        if (typeof value === "boolean") {
+            $("#" + param_id).prop('checked', value);
+        }
+        $("#" + param_id).val(value);
+        $("#" + param_id).trigger("change");
+    }
 }
 
 function set_to_default() {
@@ -436,19 +436,19 @@ function set_to_default() {
 }
 
 function refresh_params() {
-  let id = currentSelection - 1;
-  let algo = params_store[id];
-  for(let param in algo) {
-      updateParamValue(id, param, algorithms[id][param]);
-  }
+    let id = currentSelection - 1;
+    let algo = params_store[id];
+    for (let param in algo) {
+        updateParamValue(id, param, algorithms[id][param]);
+    }
 }
 
 function randomize_params() {
-  let id = currentSelection - 1;
-  if("randomize" in algorithms[id]) {
-    algorithms[id].randomize();
-  }
-  refresh_params();
+    let id = currentSelection - 1;
+    if ("randomize" in algorithms[id]) {
+        algorithms[id].randomize();
+    }
+    refresh_params();
 }
 
 function save_params() {
@@ -488,10 +488,10 @@ let codeMinWidth = 700;
 let otherMinWidth = 200;
 var tabCode = document.getElementById("v-pills-code-tab");
 tabCode.addEventListener('shown.bs.tab', function (event) {
-  document.getElementById("sideContent").style.minWidth = codeMinWidth + "px";
+    document.getElementById("sideContent").style.minWidth = codeMinWidth + "px";
 });
 tabCode.addEventListener('hidden.bs.tab', function (event) {
-  document.getElementById("sideContent").style.minWidth = otherMinWidth + "px";
+    document.getElementById("sideContent").style.minWidth = otherMinWidth + "px";
 });
 
 // update offcanvas content
@@ -599,7 +599,7 @@ function transformPanel(curr) {
 // activate all tooltips
 $(document).ready(function () {
     $('[data-bs-toggle=tooltip]').tooltip(
-        {trigger: 'hover'}
+        { trigger: 'hover' }
     );
 });
 
@@ -656,7 +656,7 @@ $('.inner_param .form-check-input').change(function () {
 /**
  * Listen for list type input changes.
  */
-$('body').on('change', '.inner_param ul .form-control', function() {
+$('body').on('change', '.inner_param ul .form-control', function () {
     let id = currentSelection - 1;
     let total = $(this).attr("id").split("__");
     let param = total[total.length - 1];
@@ -701,18 +701,18 @@ $('.inner_param ul button').click(function () {
     console.log("after", algorithms[id][param]);
 })
 
-$('.inner_param .dropdown-menu, .modal .dropdown-menu').on('click', function(e) {
+$('.inner_param .dropdown-menu, .modal .dropdown-menu').on('click', function (e) {
     e.stopPropagation();
 });
 
 function loadCodeIntoEditor(eName, alg, algName) {
-  let str = "";
-  for(key in alg) {
-    if(typeof alg[key] === "function") {
-      str += algName + "." + key + " = " + alg[key].toString() + "\n";
+    let str = "";
+    for (key in alg) {
+        if (typeof alg[key] === "function") {
+            str += algName + "." + key + " = " + alg[key].toString() + "\n";
+        }
     }
-  }
-  replaceEditorText(eName, str);
+    replaceEditorText(eName, str);
 }
 
 // Initial scripts
@@ -747,8 +747,8 @@ function stringColorToHex(s) {
 }
 
 function hexToArray(hex) {
-  let r = hex.substring(1, 3);
-  let g = hex.substring(3, 5);
-  let b = hex.substring(5, 7);
-  return [parseInt(r, 16), parseInt(g, 16), parseInt(b, 16)];
+    let r = hex.substring(1, 3);
+    let g = hex.substring(3, 5);
+    let b = hex.substring(5, 7);
+    return [parseInt(r, 16), parseInt(g, 16), parseInt(b, 16)];
 }
