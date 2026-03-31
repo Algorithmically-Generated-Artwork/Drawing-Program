@@ -1,8 +1,8 @@
 // Algorithms set up
-var algShortName = ["algGP", "algVines", "algCS", "algVD", "algCL", "algDots", 'algTartan'];
-var algNames = ["Geometric Patterns", "Vines", "Constellations", "Voronoi", "Collisions", "Dots (Simple Example)", "Tartan"];
-var algCredits = ["Geometric Patterns by Michael Wehar", "Vines by Alyssa Zhang", "Constellations by Jhovani Gallardo Moreno", "Voronoi by Jhovani Gallardo Moreno", "Collisions by Omar Khan", "Modify This Algorithm!", "Tartan by Pat"];
-var algorithms = [algGP, algVines, algCS, algVD, algCL, algDots, algTartan];
+var algShortName = ["algGP", "algVines", "algCS", "algVD", "algCL", "algTartan", "algDots"];
+var algNames = ["Geometric Patterns", "Vines", "Constellations", "Voronoi", "Collisions", "Tartan", "Dots (Simple Example)"];
+var algCredits = ["Geometric Patterns by Michael Wehar", "Vines by Alyssa Zhang", "Constellations by Jhovani Gallardo Moreno", "Voronoi by Jhovani Gallardo Moreno", "Collisions by Omar Khan", "Tartan by Patrick Tone", "Modify This Algorithm!"];
+var algorithms = [algGP, algVines, algCS, algVD, algCL, algTartan, algDots];
 var algorithmsPaused = [];
 for (let i = 0; i < algorithms.length; i++) {
     algorithms[i].initialize();
