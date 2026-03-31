@@ -67,22 +67,22 @@ const algAntFarm = (() => {
     const createAnts = (n) => Array.from({ length: n }, () => Ant());
 
     const drawOneStep = () => {
-        if (numberOfSteps > algAntFarm.maxNumberOfSteps) {
-            pause();
+        if (algAntFarm.numberOfSteps > algAntFarm.maxNumberOfSteps) {
+            algAntFarm.pause();
 
             return false;
         }
 
-        if (algAntFarm.numberOfAnts > ants.length) {
-            ants = ants.concat(createAnts(algAntFarm.numberOfAnts - ants.length));
-        } else if (algAntFarm.numberOfAnts < ants.length) {
-            ants = ants.slice(0, algAntFarm.numberOfAnts);
+        if (algAntFarm.numberOfAnts > algAntFarm.ants.length) {
+            algAntFarm.ants = algAntFarm.ants.concat(createAnts(algAntFarm.numberOfAnts - algAntFarm.ants.length));
+        } else if (algAntFarm.numberOfAnts < algAntFarm.ants.length) {
+            algAntFarm.ants = algAntFarm.ants.slice(0, algAntFarm.numberOfAnts);
         }
 
-        ants.forEach(ant => ant.move());
-        numberOfSteps += 1;
+        algAntFarm.ants.forEach(ant => ant.move());
+        algAntFarm.numberOfSteps += 1;
 
-        intervalId = setTimeout(drawOneStep, algAntFarm.speed);
+        intervalId = setTimeout(algAntFarm.drawOneStep, algAntFarm.speed);
     };
 
     const handlePanic = () => {
@@ -101,20 +101,20 @@ const algAntFarm = (() => {
     };
 
     const start = () => {
-        c.addEventListener('dblclick', handlePanic);
-        intervalId = setTimeout(drawOneStep, algAntFarm.speed);
+        c.addEventListener('dblclick', algAntFarm.handlePanic);
+        intervalId = setTimeout(algAntFarm.drawOneStep, algAntFarm.speed);
     };
 
     const pause = () => {
         clearInterval(intervalId);
-        c.removeEventListener('dblclick', handlePanic);
+        c.removeEventListener('dblclick', algAntFarm.handlePanic);
     };
 
     const reset = () => {
-        pause();
+        algAntFarm.pause();
 
-        numberOfSteps = 0;
-        ants = createAnts(algAntFarm.numberOfAnts);
+        algAntFarm.numberOfSteps = 0;
+        algAntFarm.ants = createAnts(algAntFarm.numberOfAnts);
     };
 
     const initialize = () => {
@@ -126,5 +126,7 @@ const algAntFarm = (() => {
         pause,
         reset,
         initialize,
+        drawOneStep,
+        handlePanic,
     };
 })();
