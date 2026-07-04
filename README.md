@@ -36,6 +36,7 @@
 | ![algCS Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algCS.gif) | [Constellations](https://michaelwehar.wordpress.com/2025/03/11/algoart-15-consellations/) (algCS) | Jhovani Gallardo Moreno | This algorithm, called "Constellations", reminds me of vivid memories of lying on the grass in the front yard, surrounded by my family, and looking up at the night sky. This was fresh in my mind so I decided to try to emulate constellations and create similar patterns. |
 | ![algVD Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algVD.gif) | [Voronoi](https://michaelwehar.wordpress.com/2025/03/12/algoart-16-voronoi/) (algVD) | Jhovani Gallardo Moreno | From a top-down view, a set of plant cells arranged together side-by-side appears like a tiling of a plane. After reading about different methods that can be used to create intriguing patterns / tilings, I discovered Voronoi diagrams which were originally conceptualized by the mathematician Georgy Voronoy. This is what inspired the drawing algorithm called "Voronoi". |
 | ![algCL Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algCL.gif) | [Collisions](https://michaelwehar.wordpress.com/2025/03/08/algoart-14-collisions/) (algCL) | Omar Khan | I used to play a lot of video games which involved projectiles, and it was up to the player to track their trajectory and move accordingly. I always thought it would be easier if the paths of the ball could be drawn and varied. This motivation led me to develop the Collisions drawing algorithm. |
+| ![algComp Animation](https://github.com/Algorithmically-Generated-Artwork/Drawing-Program/blob/main/readme_images/algComp.gif) | [Composition](https://michaelwehar.wordpress.com/2024/10/28/algoart-13-composition/) (algComp) | X. Dong and M. Wehar | We iteratively draw straight lines of different lengths either vertically or horizontally. After finishing all the lines, we color each block enclosed by the lines with a color from our palette. This is the general process for creating images using our 13th algorithm – Composition which is inspired by the Dutch artist Piet Mondrian (1872–1944). |
 
 ## Extended List of Algorithms and Blog Posts
 
@@ -60,6 +61,8 @@
 
 *Academic Papers & Posters*
 
+- Demo: Drawing Algorithms As Modular Objects – A Framework for Procedurally Generated Visual Arts and Music by X. Dong, D. Průša, M. Wehar, and C. Xu (FARM 2026, To Appear)
+- [Finding Maximum and Minimum Size Matrices: The Algorithmic Complexity of Coding Challenges](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FUN.2026.1) by A. Abdelmonsef, X. Dong, D. Průša, M. Wehar, and C. Xu (FUN 2026)
 - [Creating Variation When Building Image Generation Datasets](https://archive.bridgesmathart.org/2025/bridges2025-507.html) by J. Gallardo Moreno, O. Khan, and M. Wehar (Bridges 2025)
 - [Students Teaching Students Computer Art and Graphics](https://diglib.eg.org/items/107b62b8-4c4f-4c17-af21-cac792069f21) by M. Wehar (Eurographics 2025)
 - [Creating Patterns with Distance Functions & Voronoi Diagrams](https://dl.acm.org/doi/10.1145/3722564.3728384) by J. Gallardo Moreno and M. Wehar (I3D 2025)
@@ -88,17 +91,19 @@
 ## Contributors
 
 *Project Director*
+
 - Michael Wehar
 
 *Active Contributors*
 
-- Jhovani Gallardo Moreno
-- Nicholas Baldev
-- Omar Khan
+- Lorraine (Khanh) Nguyen
 - Patrick Tone
 
 *Past Contributors*
 
+- Jhovani Gallardo Moreno
+- Nicholas Baldev
+- Omar Khan
 - Lalith Suresh
 - Victor Sumano
 - EK Brickner
