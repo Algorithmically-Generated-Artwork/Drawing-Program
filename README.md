@@ -61,7 +61,7 @@
 
 *Academic Papers & Posters*
 
-- Demo: Drawing Algorithms As Modular Objects – A Framework for Procedurally Generated Visual Arts and Music by X. Dong, D. Průša, M. Wehar, and C. Xu (FARM 2026, To Appear)
+- [Demo: Drawing Algorithms As Modular Objects – A Framework for Procedurally Generated Visual Arts and Music](https://dl.acm.org/doi/10.1145/3830435.3830953) by X. Dong, D. Průša, M. Wehar, and C. Xu (FARM 2026)
 - [Finding Maximum and Minimum Size Matrices: The Algorithmic Complexity of Coding Challenges](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.FUN.2026.1) by A. Abdelmonsef, X. Dong, D. Průša, M. Wehar, and C. Xu (FUN 2026)
 - [Creating Variation When Building Image Generation Datasets](https://archive.bridgesmathart.org/2025/bridges2025-507.html) by J. Gallardo Moreno, O. Khan, and M. Wehar (Bridges 2025)
 - [Students Teaching Students Computer Art and Graphics](https://diglib.eg.org/items/107b62b8-4c4f-4c17-af21-cac792069f21) by M. Wehar (Eurographics 2025)
